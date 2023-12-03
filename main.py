@@ -1,4 +1,3 @@
-import sys
 import os
 from day1 import day1
 
@@ -17,29 +16,59 @@ def getData(day):
 def getTestData(day, num):
     return getInput(day, f"testInput{num}.txt")
 
+def getDay():
+    return int(input("Enter Day #: "))
 
 def main():
-    runtests = True
+    dm = None
     
-    day = input("Enter Day #: ")
-    data = getData(day)
-    
-    td1 = getTestData(day, 1)
-    td2 = getTestData(day, 2)
-    
-    match day:
-        case "1":
-            print ("Part 1")
-            print(f"Test: {day1.part1(td1)}")
-            print(f"Answer: {day1.part1(data)}")
+    day = getDay()
+    while (type(day) == int):
+        match day:
+            case 1:  dm = day1
+            case 2:  dm = None
+            case 3:  dm = None
+            case 4:  dm = None
+            case 5:  dm = None
+            case 6:  dm = None
+            case 7:  dm = None
+            case 8:  dm = None
+            case 9:  dm = None
+            case 10: dm = None
+            case 11: dm = None
+            case 12: dm = None
+            case 13: dm = None
+            case 14: dm = None
+            case 15: dm = None
+            case 16: dm = None
+            case 17: dm = None
+            case 18: dm = None
+            case 19: dm = None
+            case 20: dm = None
+            case 21: dm = None
+            case 22: dm = None
+            case 23: dm = None
+            case 24: dm = None
+            case 25: dm = None
+            case default: break
+                
+        if (dm != None):
+            print(f"\nDay {day}")
+            print("-----------------------------------\n")
             
-            print ("\nPart 2")
-            print(f"Test: {day1.part2(td2)}")
-            print(f"Answer: {day1.part2(data)}")
+            data = getData(day)
+            td1 = getTestData(day, 1)
+            td2 = getTestData(day, 2)    
+                
+            print("Part 1")
+            print(f"Test: {dm.part1(td1)}")
+            print(f"Answer: {dm.part1(data)}")
+            print()
+            print("Part 2")
+            print(f"Test: {dm.part2(td2)}")
+            print(f"Answer: {dm.part2(data)}")
 
-        case 2:
-            print("Day 2")
-        case default:
-            print("Ya dun goof'd")
+        print()
+        day = getDay()
     
 main()
