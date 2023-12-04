@@ -1,5 +1,6 @@
 import os
 from day1 import day1
+from day2 import day2
 
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
@@ -26,7 +27,7 @@ def main():
     while (type(day) == int):
         match day:
             case 1:  dm = day1
-            case 2:  dm = None
+            case 2:  dm = day2
             case 3:  dm = None
             case 4:  dm = None
             case 5:  dm = None
