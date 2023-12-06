@@ -2,6 +2,7 @@ import os
 from day1 import day1
 from day2 import day2
 from day3 import day3
+from day4 import day4
 
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
@@ -30,7 +31,7 @@ def main():
             case 1:  dm = day1
             case 2:  dm = day2
             case 3:  dm = day3
-            case 4:  dm = None
+            case 4:  dm = day4
             case 5:  dm = None
             case 6:  dm = None
             case 7:  dm = None
